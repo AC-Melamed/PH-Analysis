@@ -107,4 +107,5 @@ ORDER by COUNT(all_titles.title) desc;
 This produces the table seen below, which can be compared to the Mentorship Eligibility table for reference.  
 ![SUMMARY_TITLES](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/summary_titles.png)
 
-#### Example 2: 
+#### Example 2: All Employees by Birth Date
+A second possible analysis could be perfomed using a query which returned a table of all current employees grouped and ordered by birth date.  This would provide additional context and perspective on the issue of retirement by summarizing the distribution of ages among all current employees.
