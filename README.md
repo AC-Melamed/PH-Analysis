@@ -2,8 +2,8 @@ Module 7: Deliverable 3
 # PH-Analysis
 
 ## Overview of Project
-This project represents a series of analytical database queries written in SQL and executed through Postgres in the pgAdmin 4 environment.  The database in question was populated by a series of .csv documents containing various information on employees of a fictional company.  To help structure the queries and the tables they produced, an ETL (entity relationship diagram) was built and periodically referenced according the key elements shared across documents. 
-[INSERT ETL]
+This project represents a series of analytical database queries written in SQL and executed through Postgres in the pgAdmin 4 environment.  The database in question was populated by a series of .csv documents containing various information on employees of a fictional company.  To help structure the queries and the tables they produced, an ERD (entity relationship diagram) was built and periodically referenced according the key elements shared across documents. 
+![ERD](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/ERDiagram.png)
 
 ### Purpose
 The purpose of this project was to asses the potential for a sudden wave of retirements within the company in the near future by compiling a list of such and their titles, as well as to identify employees who might constitute prime candidates for mentorship.  
@@ -47,7 +47,7 @@ GROUP by unique_titles.title
 ORDER by COUNT(unique_titles.title) desc; 
 ```
 The results of this analysis were as seen in the sample below:
-[INSERT RETIRING_TITLES]
+![RETIRING_TITLES](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/retiring_titles.png)
 
 ### The Employees Eligible for the Mentorship Program
 Assuming that employees born in the year 1965 constitute prime candidates for enrollment into a mentorship program within the company, a table was queried to capture those employees which fit that description.  This also involved 'joining' multiple existing tables along common key elements, and again in this case that element was the "employee number" values.  
@@ -69,7 +69,7 @@ WHERE (emp.birth_date between '1965-01-01' AND '1965-12-31')
 ORDER by emp.emp_no;
 ```
 The results of this analysis were as seen in the sample below:
-[INSERT MENTORSHIP_ELIGIBILITY]
+![MENTORSHIP_ELIGIBILITY](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/mentorship_eligibility.png)
 
 ## Summary  
 
@@ -103,6 +103,6 @@ GROUP by all_titles.title
 ORDER by COUNT(all_titles.title) desc;
 ```
 This produces the table seen below, which can be compared to the Mentorship Eligibility table for reference.  
-[INSERT SUMMARY_TITLES]
+![SUMMARY_TITLES](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/summary_titles.png)
 
 #### Example 2: 
