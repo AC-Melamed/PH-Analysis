@@ -47,6 +47,8 @@ GROUP by unique_titles.title
 ORDER by COUNT(unique_titles.title) desc; 
 ```
 The results of this analysis were as seen in the sample below:
+
+
 ![RETIRING_TITLES](https://github.com/AC-Melamed/PH-Analysis/blob/main/Images/retiring_titles.png)
 
 ### The Employees Eligible for the Mentorship Program
